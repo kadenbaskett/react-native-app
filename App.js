@@ -1,13 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
+import "react-native-gesture-handler"; // Required import
+import { NavigationContainer } from "@react-navigation/native";
+import StackNavigator from "./StackNavigator";
 
 export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-red-500">
-        Open up App.js to start working on your app!
-      </Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <StackNavigator></StackNavigator>
+    </NavigationContainer>
   );
 }
