@@ -1,10 +1,18 @@
+import { StackNavigationProp } from "@react-navigation/stack";
 import React from "react";
 import { Button, View, Text } from "react-native";
+import { RootStackParamList } from "../StackNavigator";
 
-const DetailsScreen = ({ route, navigation }) => {
+type DetailsScreenProps = {
+  navigation: StackNavigationProp<RootStackParamList, "Details">;
+};
+
+const DetailsScreen: React.FC<DetailsScreenProps> = ({ navigation }) => {
   return (
     <View>
-      <Text>This is the Details Screen</Text>
+      <Text className="text-2xl font-bold text-blue-500">
+        This is the Details Screen
+      </Text>
       <Button
         title="Go back to Home"
         onPress={() => navigation.navigate("Home")}
