@@ -15,6 +15,10 @@ const HomeScreen: React.FC<DetailsScreenProps> = ({ navigation }) => {
         title="Go to Details"
         onPress={() => navigation.navigate("Details")}
       />
+      <Button
+        title="Go to Login"
+        onPress={() => navigation.navigate("Login")}
+      />
     </View>
   );
 };
